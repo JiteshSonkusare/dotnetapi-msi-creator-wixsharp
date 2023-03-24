@@ -14,7 +14,7 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
             
             dirProject = @"C:\dev\SampleAPI\main\";
             nameProject = "SampleAPI";
-6. We can also modify the ManagedProject object according to our requirment, we can add path InstallDir path of server where we want to install the project. Alos can        change IISVirtualDir objects data according to requirement as show below, also you can set  WindowsAuthentication to 'yes' or 'no'
+6. We can also modify the ManagedProject object according to our requirment, we can add path InstallDir path of server where we want to install the project. Also can        change IISVirtualDir objects field values according to requirement as shown below, also you can set  WindowsAuthentication to 'yes' or 'no'
 
              var project = new ManagedProject(nameProject,
                         new InstallDir(@"C:\inetpub\wwwroot\" + nameProject,
@@ -36,7 +36,7 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
                             )
             );
 
-7. In API Project, add web.config file, with reference code like below:
+7. In API Project, add web.config file if it not there, with reference code like below:
 
             <?xml version="1.0" encoding="utf-8"?>
             <configuration>
@@ -63,11 +63,11 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
             <FileVersion>1.0.0.1</FileVersion>
   
 2. Set API project to Release mode to get MSI in release mode. 
-3. Reabuld the API project.
-4. Now, go to the 'SetupMSI' and build the project, it will start building and start generating msi file for you (you can checck all the details in output wwindow).
+3. Reabuild the API project.
+4. Now, go to the 'SetupMSI' and build the project, it will start building and start generating msi file for you (you can check all the details in output wwindow).
 5. You can find the msi file in API project diretory with name like: 
               
               SampleAPI_1.0.0.1_Release
-6. Now, your msi is ready to install, it create web application in IIS and create application pool as well. You can uninstall it through control panel.
+6. Now, your msi is ready to install, Once you install this msi, it will create web application in IIS and create application pool. You can uninstall it through control panel.
    
 
