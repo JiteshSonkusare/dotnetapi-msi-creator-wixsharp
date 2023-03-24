@@ -1,8 +1,8 @@
 # dotnetapi-msi-creator-wixsharp
 Creates a MSI of dotnet API using Wixsharp
 
-Steps to follow:
-1. Create .net framework 4.8 console aplicaition with name like 'SetupMSI'.
+##Steps to follow:
+1. Create .net framework 4.8 console aplicaition with name such as 'SetupMSI'.
 2. Add Wixsharp nuget package using following command: 
             
             dotnet add package WixSharp --version 1.20.3
@@ -35,8 +35,8 @@ Steps to follow:
                                 )
                             )
             );
-7. How to create MSI:
-            a. Go to .csproj file of API project for which you want to create MSI, and add the below lines: 
+##How to create MSI:
+1. Go to .csproj file of API project for which you want to create MSI, and add the below lines: 
             
             <Authors>IT Team</Authors>
             <Company>Name</Company>
@@ -44,11 +44,12 @@ Steps to follow:
             <AssemblyVersion>1.0.0.1</AssemblyVersion>
             <FileVersion>1.0.0.1</FileVersion>
   
-  b. Set API project to Release mode to get MSI in release mode. 
-            c. Reabuld the API project.
-            d. Now, go to the 'SetupMSI' and build the project, it will start building and start generating msi file for you (you can checck all the details in output wwindow).
-            e. You can find the msi file in API project diretory with name like: 
+2. Set API project to Release mode to get MSI in release mode. 
+3. Reabuld the API project.
+4. Now, go to the 'SetupMSI' and build the project, it will start building and start generating msi file for you (you can checck all the details in output wwindow).
+5. You can find the msi file in API project diretory with name like: 
+              
               SampleAPI_1.0.0.1_Release
-8. Now, your msi is ready to install, it create web application in IIS and create application pool as well. You can uninstall it through control panel.
+6. Now, your msi is ready to install, it create web application in IIS and create application pool as well. You can uninstall it through control panel.
    
 
