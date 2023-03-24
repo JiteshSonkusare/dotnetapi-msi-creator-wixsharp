@@ -10,7 +10,7 @@ This projetc will helps developer to create the MSI file for any dotnet API (dot
             
             "$(TargetPath)" $(SolutionDir) $(SolutionName) $(ConfigurationName)
 4. Now, chnage name Program.cs to Script.cs add the code shown in repository Script.cs file
-5. In script.cs class, replace the directory path for which project you want to create the MSI as shown below: 
+5. In script.cs class, replace the directory path for which project you want to create the MSI as shown below (path until project.sln file placed):
             
             dirProject = @"C:\dev\SampleAPI\main\";
             nameProject = "SampleAPI";
