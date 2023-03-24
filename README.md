@@ -35,6 +35,23 @@ This projetc will helps developer to create the MSI file for any dotnet API (dot
                                 )
                             )
             );
+
+7. In API Project, add web.config file, with reference code like below:
+
+            <?xml version="1.0" encoding="utf-8"?>
+            <configuration>
+                        <system.webServer>
+                                    <modules>
+                                                <remove name="WebDAVModule" />
+                                    </modules>
+                                    <handlers>
+                                                <remove name="WebDAV" />
+                                                <remove name="aspNetCore" />
+                                                <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
+                                    </handlers>
+                                    <aspNetCore processPath="dotnet" arguments=".\KontofonMonitorAPI.dll" stdoutLogEnabled="true" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
+                        </system.webServer>
+            </configuration>
             
 ## How to create MSI:
 1. Go to .csproj file of API project for which you want to create MSI, and add the below lines: 
