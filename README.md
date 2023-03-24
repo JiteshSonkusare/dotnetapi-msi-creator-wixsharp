@@ -4,9 +4,11 @@ Creates a MSI of dotnet API using Wixsharp
 Steps to follow:
 1. Create .net framework 4.8 console aplicaition with name like 'SetupMSI'.
 2. Add Wixsharp nuget package using following command: 
+            
             <dotnet add package WixSharp --version 1.20.3>
 
 3. Right click on project go to: 'build events > post build event command line' and add below code
+            
             "$(TargetPath)" $(SolutionDir) $(SolutionName) $(ConfigurationName)
 
 4. Now, chnage name Program.cs to Script.cs add the code shown in repository Script.cs file
