@@ -6,7 +6,7 @@ Steps to follow:
 2. Add Wixsharp nuget package using following command: 
             <dotnet add package WixSharp --version 1.20.3>
 
-3. Right click on project go to: 'build events > post build event command line' and add below code 
+3. Right click on project go to: 'build events > post build event command line' and add below code
             "$(TargetPath)" $(SolutionDir) $(SolutionName) $(ConfigurationName)
 
 4. Now, chnage name Program.cs to Script.cs add the code shown in repository Script.cs file
