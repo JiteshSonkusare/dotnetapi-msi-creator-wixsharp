@@ -5,18 +5,15 @@ Steps to follow:
 1. Create .net framework 4.8 console aplicaition with name like 'SetupMSI'.
 2. Add Wixsharp nuget package using following command: 
             
-            <dotnet add package WixSharp --version 1.20.3>
-
+            dotnet add package WixSharp --version 1.20.3
 3. Right click on project go to: 'build events > post build event command line' and add below code
             
             "$(TargetPath)" $(SolutionDir) $(SolutionName) $(ConfigurationName)
-
 4. Now, chnage name Program.cs to Script.cs add the code shown in repository Script.cs file
 5. In script.cs class, replace the directory path for which project you want to create the MSI as shown below: 
             
             dirProject = @"C:\dev\SampleAPI\main\";
             nameProject = "SampleAPI";
-
 6. We can also modify the ManagedProject object according to our requirment, we can add path InstallDir path of server where we want to install the project. Alos can        change IISVirtualDir objects data according to requirement as show below, also you can set  WindowsAuthentication to 'yes' or 'no'
 
              var project = new ManagedProject(nameProject,
@@ -40,11 +37,12 @@ Steps to follow:
             );
 7. How to create MSI: 
   a. Go to .csproj file of API project for which you want to create MSI, and add the below lines: 
-            	<Authors>IT Team</Authors>
-              <Company>Name</Company>
-              <Version>1.0.0.1</Version>
-              <AssemblyVersion>1.0.0.1</AssemblyVersion>
-              <FileVersion>1.0.0.1</FileVersion>
+            
+            <Authors>IT Team</Authors>
+            <Company>Name</Company>
+            <Version>1.0.0.1</Version>
+            <AssemblyVersion>1.0.0.1</AssemblyVersion>
+            <FileVersion>1.0.0.1</FileVersion>
   b. Set API project to Release mode to get MSI in release mode. 
   c. Reabuld the API project.
   d. Now, go to the 'SetupMSI' and build the project, it will start building and start generating msi file for you (you can checck all the details in output wwindow).
