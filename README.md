@@ -35,7 +35,8 @@ Creates a MSI of dotnet API using Wixsharp
                                 )
                             )
             );
-##How to create MSI:
+            
+## How to create MSI:
 1. Go to .csproj file of API project for which you want to create MSI, and add the below lines: 
             
             <Authors>IT Team</Authors>
