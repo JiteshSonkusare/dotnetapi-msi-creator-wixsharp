@@ -1,4 +1,4 @@
-# MSI file Creator for dotnet API Using Wixsharp
+# MSI File Creator For Dotnet API Using Wixsharp
 This projetc will helps developer to create the MSI file for any dotnet API (dotnetcore, dotnet6, dotnet7,..) to deploy API to IIS server.  
 
 ##Steps to follow:
