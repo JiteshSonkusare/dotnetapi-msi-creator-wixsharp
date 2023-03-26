@@ -49,7 +49,7 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
                                                 <remove name="aspNetCore" />
                                                 <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
                                     </handlers>
-                                    <aspNetCore processPath="dotnet" arguments=".\KontofonMonitorAPI.dll" stdoutLogEnabled="true" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
+                                    <aspNetCore processPath="dotnet" arguments=".\SampleAPI.dll" stdoutLogEnabled="true" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
                         </system.webServer>
             </configuration>
             
