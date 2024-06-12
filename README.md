@@ -73,7 +73,7 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
 ## Issue:
 If you got into issue saying that: 
 
-            Unhandled Exception: WixSharp.WixSharpException: WiX binaries cannot be found. Wix# is capable of automatically finding WiX                 tools only if WiX Toolset installed.
+            Unhandled Exception: WixSharp.WixSharpException: WiX binaries cannot be found. Wix# is capable of automatically finding WiX tools only if WiX Toolset installed.
 
 Then, Add package: WixSharp.wix.bin
 
