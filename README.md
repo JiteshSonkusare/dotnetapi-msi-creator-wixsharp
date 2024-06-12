@@ -69,5 +69,17 @@ This projetc will helps developers to create the MSI file for any dotnet API (do
               
               SampleAPI_1.0.0.1_Release
 6. Now, your msi is ready to install, Once you install this msi, it will create web application in IIS and create application pool. You can uninstall it through control panel.
-   
+
+## Issue:
+If you got into issue saying that: 
+
+            Unhandled Exception: WixSharp.WixSharpException: WiX binaries cannot be found. Wix# is capable of automatically finding WiX                 tools only if WiX Toolset installed.
+
+Then, Add package: WixSharp.wix.bin
+
+            dotnet add package WixSharp.wix.bin --version 3.14.1
+
+Now, Try to Build your SetupMSI project. 
+
+
 
